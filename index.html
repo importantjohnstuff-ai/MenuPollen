@@ -1,353 +1,566 @@
-/* --- General Styling & Variables --- */
-:root {
-    --primary-color: #fdb813; /* Bee Yellow */
-    --secondary-color: #2E7D32; /* Dark Green */
-    --dark-color: #212121; /* Dark Gray/Black */
-    --light-color: #FFFDE7; /* Creamy White */
-    --text-color: #333;
-    --border-radius: 8px;
-    --shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollen Bee Catering Services | Bacolod City</title>
+    <meta name="description" content="Affordable and delicious catering packages for any event in Bacolod City.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- General Styling & Variables --- */
+        :root {
+            --primary-color: #fdb813; /* Bee Yellow */
+            --secondary-color: #2E7D32; /* Dark Green */
+            --dark-color: #212121; /* Dark Gray/Black */
+            --light-color: #FFFDE7; /* Creamy White */
+            --text-color: #333;
+            --border-radius: 8px;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Offset for fixed header */
-}
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px; /* Offset for fixed header */
+        }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.7;
-    background-color: var(--light-color);
-    color: var(--text-color);
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            background-color: var(--light-color);
+            color: var(--text-color);
+        }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 10px;
-    color: var(--dark-color);
-}
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
-h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
-}
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
 
-.section-subtitle {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 3rem auto;
-    font-size: 1rem;
-    color: #666;
-}
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
 
-ul {
-    list-style: none;
-}
+        .section-subtitle {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+            font-size: 1rem;
+            color: #666;
+        }
 
-a {
-    text-decoration: none;
-    color: var(--secondary-color);
-}
+        ul {
+            list-style: none;
+        }
 
-section {
-    padding: 5rem 0;
-}
+        a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
+        }
 
+        a:hover {
+            color: var(--primary-color);
+        }
 
-/* --- Header & Navigation --- */
-header {
-    background-color: #ffffff;
-    box-shadow: var(--shadow);
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--dark-color);
-}
-
-nav ul {
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav a {
-    color: var(--dark-color);
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--primary-color);
-}
-
-/* --- Hero Section --- */
-#hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1887&auto=format&fit=crop') no-repeat center center/cover;
-    height: 60vh;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.hero-content {
-    max-width: 800px;
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    color: #fff;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--dark-color);
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #ffd043;
-    transform: translateY(-3px);
-}
-
-/* --- Packages Section --- */
-.packages-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.package-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    text-align: center;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.package-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.package-card h3 {
-    font-size: 1.8rem;
-    color: var(--secondary-color);
-}
-
-.price {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--dark-color);
-    margin: 1rem 0;
-}
-
-.price span {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #666;
-}
-
-.package-card ul {
-    margin-top: 1.5rem;
-}
-
-.package-card li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
-}
-.package-card li:last-child {
-    border-bottom: none;
-}
-
-.highlight {
-    font-weight: 600;
-    color: var(--dark-color);
-}
-
-.package-card.featured {
-    border: 2px solid var(--primary-color);
-    transform: scale(1.05);
-    position: relative;
-}
-
-.tag {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--primary-color);
-    color: var(--dark-color);
-    padding: 5px 15px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-/* --- Menu Section --- */
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-}
-
-.menu-category {
-    background: #fff;
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-}
-
-.menu-category h4 {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.menu-category h5 {
-    font-weight: 600;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #555;
-}
-
-.menu-category li {
-    margin-bottom: 0.5rem;
-}
-
-.lechon-note {
-    text-align: center;
-    margin-top: 3rem;
-    font-size: 1.1rem;
-    background-color: var(--primary-color);
-    color: var(--dark-color);
-    padding: 1rem;
-    border-radius: var(--border-radius);
-}
-
-/* --- Inclusions & Terms --- */
-.inclusions-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    background-color: #fff;
-    padding: 3rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-}
-
-.inclusion-item h4 {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.inclusion-item li {
-    margin-bottom: 0.75rem;
-}
-.inclusion-item li::before {
-    content: '✔';
-    color: var(--secondary-color);
-    margin-right: 10px;
-}
-
-/* --- Contact Section --- */
-#contact {
-    text-align: center;
-    background-color: #fff;
-}
-
-.contact-info {
-    margin-top: 2rem;
-    font-size: 1.1rem;
-}
-
-.contact-info p {
-    margin-bottom: 1rem;
-}
-
-/* --- Footer --- */
-footer {
-    text-align: center;
-    padding: 2rem 0;
-    background-color: var(--dark-color);
-    color: #fff;
-}
+        section {
+            padding: 5rem 0;
+        }
 
 
-/* --- Responsive Design --- */
-@media (max-width: 992px) {
-    .packages-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .package-card.featured {
-        grid-column: 1 / -1; /* Make featured span full width */
-        transform: scale(1);
-    }
-}
+        /* --- Header & Navigation --- */
+        header {
+            background-color: #ffffff;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
 
-@media (max-width: 768px) {
-    h1 { font-size: 2.8rem; }
-    h2 { font-size: 2rem; }
-    
-    header .container {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
-    }
-    nav ul {
-        margin-top: 10px;
-    }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
 
-    html {
-        scroll-padding-top: 120px;
-    }
-    
-    .packages-grid, .inclusions-grid {
-        grid-template-columns: 1fr;
-    }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+        .logo:hover { color: var(--dark-color); }
 
-    .package-card.featured {
-        transform: scale(1);
-    }
-}
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1920x1080/2E7D32/FFFDE7?text=Delicious+Food+by+Pollen+Bee') no-repeat center center/cover;
+            height: 60vh;
+            min-height: 400px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: #fff;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ffd043;
+            transform: translateY(-3px);
+            color: var(--dark-color);
+        }
+
+        /* --- Packages Section --- */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .package-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .package-card h3 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin: 1rem 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #666;
+        }
+
+        .package-card ul {
+            margin-top: 1.5rem;
+        }
+
+        .package-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .package-card li:last-child {
+            border-bottom: none;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .package-card.featured {
+            border: 2px solid var(--primary-color);
+            transform: scale(1.05);
+            position: relative;
+        }
+
+        .tag {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* --- Menu Section --- */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .menu-category {
+            background: #fff;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .menu-category h4 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .menu-category h5 {
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .menu-category li {
+            margin-bottom: 0.5rem;
+        }
+
+        .lechon-note {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 1.1rem;
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+        }
+
+        /* --- Inclusions & Terms --- */
+        .inclusions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background-color: #fff;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .inclusion-item h4 {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .inclusion-item li {
+            margin-bottom: 0.75rem;
+        }
+        .inclusion-item li::before {
+            content: '✔';
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+
+        /* --- Contact Section --- */
+        #contact {
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+        }
+        .contact-info a {
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: var(--dark-color);
+            color: #fff;
+        }
+
+        /* --- Messenger FAB (Floating Action Button) --- */
+        .messenger-fab {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #0084ff, #00c6ff);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 132, 255, 0.4);
+            z-index: 100;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .messenger-fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 132, 255, 0.5);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+            .package-card.featured {
+                order: -1; /* Make featured appear first */
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2rem; }
+            
+            nav { display: none; } /* Simple hide for demo, can be replaced with hamburger menu */
+
+            html {
+                scroll-padding-top: 0;
+            }
+            
+            .inclusions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Pollen Bee Catering</a>
+            <ul>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content container">
+                <h1>Catering for Your Special Moments</h1>
+                <p>Delicious food and professional service for events in Bacolod City. 🐝</p>
+                <a href="#packages" class="btn">View Our Packages</a>
+            </div>
+        </section>
+
+        <!-- Packages Section -->
+        <section id="packages" class="container">
+            <h2>Our Catering Packages</h2>
+            <p class="section-subtitle">Minimum of 50 persons. All packages include Soup, Pasta/Salad, Vegetable Dish, Steamed Rice, and Soda/Juice/Fruit Punch.</p>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>Set A</h3>
+                    <p class="price">₱330 <span>/ head</span></p>
+                    <ul>
+                        <li><span class="highlight">2</span> Main Courses</li>
+                        <li><span class="highlight">1</span> Dessert</li>
+                    </ul>
+                </div>
+                <div class="package-card featured">
+                    <span class="tag">Best Value</span>
+                    <h3>Set B</h3>
+                    <p class="price">₱395 <span>/ head</span></p>
+                    <ul>
+                        <li><span class="highlight">3</span> Main Courses</li>
+                        <li><span class="highlight">1</span> Dessert</li>
+                    </ul>
+                </div>
+                <div class="package-card">
+                    <h3>Set C</h3>
+                    <p class="price">₱495 <span>/ head</span></p>
+                    <ul>
+                        <li><span class="highlight">4</span> Main Courses</li>
+                        <li><span class="highlight">2</span> Desserts</li>
+                        <li><span class="highlight">Plus</span> Fruits</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="container">
+            <h2>Choose Your Menu</h2>
+            <p class="section-subtitle">A wide variety of delicious options to suit any taste.</p>
+            <div class="menu-grid">
+                <div class="menu-category">
+                    <h4>Main Courses</h4>
+                    <h5>Chicken</h5>
+                    <ul>
+                        <li>Chicken Teriyaki</li>
+                        <li>Chicken A La Crema</li>
+                        <li>Chicken Cordon Bleu</li>
+                        <li>Chicken Afritada</li>
+                        <li>Fried Chicken & Curry</li>
+                    </ul>
+                    <h5>Pork</h5>
+                    <ul>
+                        <li>Pork Hamonado</li>
+                        <li>Pork Tapa n' Cream</li>
+                        <li>Pork Steak & Teriyaki</li>
+                    </ul>
+                    <h5>Beef & Fish</h5>
+                    <ul>
+                        <li>Beef Steak & Broccoli</li>
+                        <li>Sweet & Sour Fish Filet</li>
+                        <li>Fish Filet with Dip</li>
+                    </ul>
+                </div>
+
+                <div class="menu-category">
+                    <h4>Side Dishes</h4>
+                     <h5>Appetizer & Salad</h5>
+                    <ul>
+                        <li>Potato Salad</li>
+                        <li>Chicken Macaroni</li>
+                        <li>Garden Salad & Coleslaw</li>
+                    </ul>
+                     <h5>Pasta & Noodles</h5>
+                    <ul>
+                        <li>Carbonara & Spaghetti</li>
+                        <li>Sotanghon Guisado</li>
+                        <li>Pancit Guisado</li>
+                    </ul>
+                </div>
+
+                <div class="menu-category">
+                    <h4>Veggies & Sweets</h4>
+                     <h5>Vegetable Dishes</h5>
+                    <ul>
+                        <li>Pinakbet & Chopsuey</li>
+                        <li>Stir Fry Veggies</li>
+                        <li>Baguio Beans in Oyster Sauce</li>
+                    </ul>
+                    <h5>Desserts & Beverages</h5>
+                    <ul>
+                        <li>Maja Blanca & Mango Float</li>
+                        <li>Buko Pandan & Brownies</li>
+                        <li>Iced Tea & Fruit Punch</li>
+                    </ul>
+                </div>
+            </div>
+             <p class="lechon-note">**We also accept <strong>Lechon</strong> orders for an additional price.**</p>
+        </section>
+        
+        <!-- Service Details Section -->
+        <section id="inclusions" class="container">
+            <h2>Service Details</h2>
+             <div class="inclusions-grid">
+                <div class="inclusion-item">
+                    <h4>What's Included</h4>
+                     <ul>
+                        <li>Complete Buffet Setup</li>
+                        <li>Guests' Tables & Chairs with Covers</li>
+                        <li>Complete Utensils</li>
+                        <li>Professional Service Crew</li>
+                    </ul>
+                </div>
+                <div class="inclusion-item">
+                     <h4>Terms of Service</h4>
+                     <ul>
+                        <li>Services are for <strong>3 hours</strong> upon start of dining.</li>
+                        <li>Out-of-town bookings have transportation charges.</li>
+                        <li><strong>50% down payment</strong> to book, 50% on event day.</li>
+                        <li>Booking must be made <strong>1 week</strong> before the event.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <h2>Book Your Event Today!</h2>
+            <p>Contact us to discuss your catering needs. We're excited to be a part of your celebration!</p>
+            <div class="contact-info">
+                <p><strong>Location:</strong> LOT 1 BLK 39 RPHS DC1, BRGY. ALIJIS, BACOLOD CITY</p>
+                <p><strong>Landline:</strong> (034) 703-5345</p>
+                <p><strong>Mobile / Viber:</strong> 0981-559-9166</p>
+                <p><strong>Messenger:</strong> <a href="https://m.me/100071452305608" target="_blank">Chat with us on Facebook</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Pollen Bee Catering Services. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Messenger Chat Bubble -->
+    <a href="https://m.me/100071452305608" class="messenger-fab" target="_blank" aria-label="Chat with us on Messenger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M12,2.25c-5.38,0-9.75,3.47-9.75,7.75c0,2.83,1.96,5.32,4.78,6.62L6.75,22l4.28-2.68c0.32,0.05,0.65,0.08,0.97,0.08 c5.38,0,9.75-3.47,9.75-7.75S17.38,2.25,12,2.25z M10.99,13.43l-1.51-2.27l4.54-3.03l1.51,2.27L10.99,13.43z"/>
+        </svg>
+    </a>
+
+</body>
+</html>
